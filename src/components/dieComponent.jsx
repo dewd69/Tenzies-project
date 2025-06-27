@@ -1,16 +1,11 @@
-export default function Diecompo(prop) {
-    return (
-        <div className="box">
-            <div className="die">1</div>
-            <div className="die">1</div>
-            <div className="die">1</div>
-            <div className="die">1</div>
-            <div className="die">1</div>
-            <div className="die">1</div>
-            <div className="die">1</div>
-            <div className="die">1</div>
-            <div className="die">1</div>
-            <div className="die">1</div>
-        </div>
-    );
+export default function Diecompo({ numbers }) {
+  const diceElements = numbers.map((value, index) => (
+    <button key={index} className="die">{value}</button>
+  ))
+
+  return (
+    <div className="box">
+      {diceElements}
+    </div>
+  )
 }
