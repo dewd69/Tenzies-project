@@ -1,3 +1,7 @@
+import "./App.css"
+import Diecompo from "./components/dieComponent"
 export default function App(){
-  alert("OYE")
+  return <main>
+  <Diecompo />
+  </main>
 }
