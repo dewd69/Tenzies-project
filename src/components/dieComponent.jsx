@@ -1,6 +1,6 @@
-export default function Diecompo({ numbers }) {
-  const diceElements = numbers.map((dieobj, index) => (
-    <button  key={index} className={`die ${dieobj.isHeld ? "dieClicked" : ""}`} >{dieobj.value}</button>
+export default function Diecompo(props) {
+  const diceElements = props.numbers.map((dieobj) => (
+    <button onClick={()=>props.hold(dieobj.id)} key={dieobj.id} className={`die ${dieobj.isHeld ? "dieClicked" : ""}`} >{dieobj.value}</button>
   ))
 
   return (
