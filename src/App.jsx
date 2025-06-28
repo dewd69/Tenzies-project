@@ -29,11 +29,16 @@ function hold(id){
   return (
     <main>
       <header className="head">Tenzies</header>
-      <p className="para">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+     
       <Diecompo 
       hold = {hold}
       numbers={numbers} />
       <button onClick={rollDice} className="die-Roller">Roll</button>
+       <p className="instructions-title">🎯 How to Play</p>
+        <p className="instructions-text">
+            Roll until all dice show the same number. <br />
+            Click a die to “freeze” it at its current value between rolls.
+        </p> 
     </main>
   )
 }
